@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div id="debug"></div>
+
+    <script>
+
+        class Creature {
+            constructor(weightValue = 1) {
+                this.name = "cicada";
+            }
+            makeSound() {
+                console.log(this.name);
+                // const _this = this; //用這個方式解
+                setTimeout(function () {//他隸屬window func  或換成箭頭函式
+                    console.log(_this.name);  // 這裡的this 變window
+                }, 1000)
+            }
+        }
+        const obj = new Creature();
+        obj.makeSound();
+
+
+        // class Creature {
+        //     constructor(weightValue = 1) {
+        //         this.name = "cicada";
+        //     }
+        //     makeSound() {
+        //         console.log(this.name);
+        //         const _this = this;
+        //         setTimeout(function () {
+        //             console.log(_this.name);
+        //         }, 1000)
+        //     }
+        // }
+        // const obj = new Creature();
+        // obj.makeSound();
+
+
+        // class Creature {
+        //     constructor(weightValue = 1) {
+        //         this.name = "cicada";
+        //     }
+        //     makeSound() {
+        //         console.log(this.name);
+        //         setTimeout(() => {
+        //             console.log(this.name);
+        //         }, 1000)
+        //     }
+        // }
+        // const obj = new Creature();
+        // obj.makeSound();
+
+
+    </script>
+
+</body>
+
+</html>

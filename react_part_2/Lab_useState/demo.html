@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">0</div>
+    <button id='btn' onclick="btnclick()">+</button>
+    <script>
+        let x = 100
+        const a = {
+            hi :100
+        }
+        function test(){ //重新func、物件內,const值可以變
+            const y = x
+            x += x
+            root.innerHTML =` ${y} and ${a.hi}`
+            a.hi += 50 
+        }
+    function btnclick(){
+        test()
+    }
+        
+
+        
+
+    </script>
+</body>
+</html>
